@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Step | Shop Footwear</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1rem;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        /* Filter & Sort Section */
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .controls select, .controls input {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Product Card */
+        .product {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-details {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            color: #888;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: #55ff00;
+        }
+
+        .add-to-cart {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #ffcc66;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Next Step Footwear</h1>
+        <p>Find your perfect step</p>
+    </header>
+
+    <!-- Filter & Sort Section -->
+    <section class="controls">
+        <div>
+            <label for="filter">Filter by Category:</label>
+            <select id="filter">
+                <option value="Sweat Leather">Sweat Leather</option>
+                <option value="sneakers">Sneakers</option>
+                <option value="boots">Boots</option>
+                <option value="sports">Sports</option>
+                <option value="All">All</option>
+            </select>
+        </div>
+        <div>
+            <label for="sort">Sort by Price:</label>
+            <select id="sort">
+                <option value="low">Low to High</option>
+                <option value="high">High to Low</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="product-grid" id="productGrid">
+        
+        <div class="product">
+            <img src="red chief.png">
+            <div class="product-details">
+                <h3>Red Chief Genuine Leather Low Ankle Lace Up Casual Fit Shoes For Men |RC3849 022</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+
+                <br><br>
+                <p class="price"><strike>₹5,299/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹3,699/-</p>
+                <p>MRP:(Inclusive of all taxes)
+                Country Origin - INDIA</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="war.jpg">
+            <div class="product-details">
+                <h3>Zelt High Quality Italian Suede Leather Side Zip Tan Casual Shoes Boots</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+                <p class="price"><strike>₹3,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹2,795/-</p>
+                <p>MRP:(Inclusive of all taxes)
+                Country Origin - INDIA</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="LC1658CAMELA1462864261.jpg">
+            <div class="product-details">
+                <h3>LEE COOPER 
+                    Men Genuine Leather Casual Shoes For Men</h3>
+                    <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+                <p class="price"><strike>₹7,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹6,195/-</p>
+                <p>MRP:(Inclusive of all taxes)
+                Country Origin - INDIA</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="wd.webp">
+            <div class="product-details">
+                <h3>Woodland Mens OGC 3608119 Sneaker</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+                <p class="price"><strike>₹12,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹9,999/-</p>
+                <p>MRP:(Inclusive of all taxes)
+                Country Origin - INDIA</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="tuc.jpeg" alt="Lee Cooper Shoes">
+            <div class="product-details">
+                <h3>HUSH PUPPIES Adam Lace Up Shoe Brown 10 tuc144353631</h3>
+                    <label for="size">Select Size:</label>
+                    <select id="size" name="size">
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    
+                    <br><br>
+                <p class="price"><strike>₹6,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹5,999/-</p>
+                <p>MRP: (Inclusive of all taxes)</p>
+                <p>Country Origin - INDIA</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- More products can be added here... -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Next Step Footwear. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Filtering and Sorting -->
+    <script>
+        const filter = document.getElementById('filter');
+        const sort = document.getElementById('sort');
+        const productGrid = document.getElementById('productGrid');
+        const products = Array.from(document.getElementsByClassName('product'));
+
+        // Filter Products
+        filter.addEventListener('change', function() {
+            const category = this.value;
+            products.forEach(product => {
+                if (category === 'all' || product.dataset.category === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
+
+        // Sort Products
+        sort.addEventListener('change', function() {
+            const order = this.value;
+            const sortedProducts = products.sort((a, b) => {
+                const priceA = parseInt(a.dataset.price);
+                const priceB = parseInt(b.dataset.price);
+                return order === 'low' ? priceA - priceB : priceB - priceA;
+            });
+
+            sortedProducts.forEach(product => productGrid.appendChild(product));
+        });
+    </script>
+
+</body>
+</html>

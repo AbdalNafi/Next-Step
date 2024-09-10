@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: auto;
+        }
+
+        .remove-btn {
+            color: #ff0000;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+            background: none;
+        }
+
+        .remove-btn:hover {
+            text-decoration: underline;
+        }
+
+        .summary {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .summary h2 {
+            margin-bottom: 15px;
+        }
+
+        .summary p {
+            margin: 5px 0;
+        }
+
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background-color: #ffcc66;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+
+    <div class="container">
+        <!-- Cart Table -->
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart items will be dynamically inserted here -->
+            </tbody>
+        </table>
+
+        <!-- Cart Summary -->
+        <div class="summary">
+            <h2>Cart Summary</h2>
+            <p><strong>Subtotal:</strong> $<span id="subtotal">0.00</span></p>
+            <p><strong>Tax (5%):</strong> $<span id="tax">0.00</span></p>
+            <p><strong>Total:</strong> $<span id="total">0.00</span></p>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        // Sample cart data
+        const cartItems = [
+            { name: 'Sporty Sneaker', price: 80, quantity: 1, image: 'https://via.placeholder.com/100x100?text=Sneaker+1' },
+            { name: 'Stylish Boot', price: 120, quantity: 2, image: 'https://via.placeholder.com/100x100?text=Boot+1' }
+        ];
+
+        function loadCart() {
+            const tableBody = document.querySelector('#cartTable tbody');
+            let subtotal = 0;
+
+            cartItems.forEach(item => {
+                const row = document.createElement('tr');
+                
+                row.innerHTML = `
+                    <td class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        ${item.name}
+                    </td>
+                    <td>$${item.price.toFixed(2)}</td>
+                    <td>${item.quantity}</td>
+                    <td>$${(item.price * item.quantity).toFixed(2)}</td>
+                    <td><button class="remove-btn" onclick="removeItem('${item.name}')">Remove</button></td>
+                `;
+                
+                tableBody.appendChild(row);
+                subtotal += item.price * item.quantity;
+            });
+
+            // Update summary
+            document.getElementById('subtotal').textContent = subtotal.toFixed(2);
+            const tax = subtotal * 0.05;
+            document.getElementById('tax').textContent = tax.toFixed(2);
+            document.getElementById('total').textContent = (subtotal + tax).toFixed(2);
+        }
+
+        function removeItem(itemName) {
+            // Remove item from the cartItems array
+            const index = cartItems.findIndex(item => item.name === itemName);
+            if (index !== -1) {
+                cartItems.splice(index, 1);
+                // Clear the table and reload
+                document.querySelector('#cartTable tbody').innerHTML = '';
+                loadCart();
+            }
+        }
+
+        function checkout() {
+            alert('Proceeding to checkout...');
+            // Redirect to checkout page
+            window.location.href = 'checkout.html';
+        }
+
+        // Load cart on page load
+        window.onload = loadCart;
+    </script>
+
+</body>
+</html>
