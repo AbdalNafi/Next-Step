@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Step</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <script src="main.js"></script>
+
+    <header>
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="main1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div>
+            <div class="header-content">
+                <h1>Next Step</h1>
+                <h3>Family Footwear</h3>
+                <p>Discover the latest trends in fashion</p>
+            </div>
+            <div class="content">
+
+                <button class="btn" onclick="window.location.href='men.html'">Mens</button>
+                <button class="btn" onclick="window.location.href='women.html'">Womens</button>
+            </div>
+            
+        </div>
+    </header>
+<!-- Product Section -->
+
+<center><h1 style="background-color: rgb(255, 136, 0);">Sweat Leather</h1></center>
+<section class="product-grid" id="productGrid">
+    
+    <div class="product">
+        <img src="red chief.png">
+        <div class="product-details">
+            <h3>Red Chief Genuine Leather Shoes</h3>
+            <label for="size">Select Size:</label>
+            <select id="size1" name="size">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <p class="price"><strike>₹5,299/-</strike></p>
+            <p style="color: rgb(0, 128, 255);">ONLY FOR ₹3,699/-</p>
+            <p>MRP:(Inclusive of all taxes)</p>
+            <button class="add-to-cart" onclick="addToCart(this, 'Red Chief Genuine Leather Shoes', 3699)">Add To Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="war.jpg">
+        <div class="product-details">
+            <h3>Zelt High Quality Italian Suede Leather Boots</h3>
+            <label for="size">Select Size:</label>
+            <select id="size2" name="size">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br><br>
+            <p class="price"><strike>₹3,999/-</strike></p>
+            <p style="color: rgb(0, 128, 255);">ONLY FOR ₹2,795/-</p>
+            <p>MRP:(Inclusive of all taxes) Country Origin - INDIA</p>
+            <button class="add-to-cart" onclick="addToCart(this, 'Zelt Suede Leather Boots', 2795)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="wd.webp">
+        <div class="product-details">
+            <h3>Woodland Mens OGC 3608119 Sneaker</h3>
+            <label for="size">Select Size:</label>
+            <select id="size3" name="size">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br><br>
+            <p class="price"><strike>₹12,999/-</strike></p>
+            <p style="color: rgb(0, 128, 255);">ONLY FOR ₹9,999/-</p>
+            <p>MRP:(Inclusive of all taxes) Country Origin - INDIA</p>
+            <button class="add-to-cart" onclick="addToCart(this, 'Woodland Sneaker', 9999)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+    <center><h1 style="background-color: beige;">Sports Shoes</h1></center>
+    <section class="product-grid" id="productGrid">
+        
+        <div class="product">
+            <img src="sparx.jpeg">
+            <div class="product-details">
+                <h3>SM-678 Running Shoes For Men</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+
+                <br><br>
+                <p class="price"><strike>₹2,299/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹1,699/-</p>
+                <p>MRP:(Inclusive of all taxes)
+                Country Origin - INDIA</p>
+
+             <button class="add-to-cart" onclick="addToCart(this, 'SM-678 Running Shoes For Men', 1699)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="campaus.webp">
+            <div class="product-details">
+                <h3>Campus Men's Mesh Running Shoe</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+                <p class="price"><strike>₹1,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹1,495/-</p>
+                <p>MRP:(Inclusive of all taxes)
+                Country Origin - INDIA</p>
+                <button class="add-to-cart" onclick=
+                "addToCart(this, 'Campus Mens Mesh Running Shoe', 1699)">
+                Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="white.webp">
+            <div class="product-details">
+                <h3>Super Hyper Beads Sports Shoes for Men</h3>
+                    <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+                <p class="price"><strike>₹2,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹2,799/-</p>
+                <p>MRP:(Inclusive of all taxes)
+                Country Origin - INDIA</p>
+                <button class="add-to-cart" onclick=
+                "addToCart(this, 'Super Hyper Beads Sports Shoes for Men', 1699)">
+                Add to Cart</button>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <center><h1 style="background-color: rgb(85, 224, 255);">Formals Shoes</h1></center>
+    <section class="product-grid" id="productGrid">
+        
+        <div class="product">
+            <img src="redch.jpg">
+            <div class="product-details">
+                <h3>RED CHIEF
+                    Formal Lace-Up Shoe with Genuine leather Upper</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+
+                <br><br>
+                <p class="price"><strike>₹2,299/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹1,699/-</p>
+                <p>MRP:(Inclusive of all taxes)
+                Country Origin - INDIA</p>
+
+                <button class="add-to-cart" onclick=
+                "addToCart(this, 'RED CHIEF Formal Lace-Up Shoe with Genuine leather Upper', 1699)">
+                Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="puppie.jpg">
+            <div class="product-details">
+                <h3>HUSH PUPPIES 
+                   | Slip On For Men |
+                    Genuine leather|</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+                <p class="price"><strike>₹1,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹1,495/-</p>
+                <p>MRP:(Inclusive of all taxes)
+                Country Origin - INDIA</p>
+                <button class="add-to-cart" onclick=
+                "addToCart(this, 'HUSH PUPPIES | Slip On For Men | Genuine leather|', 1699)">
+                Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="cardi.jpg">
+            <div class="product-details">
+                <h3>TEAKWOOD LEATHER MEN SOLID BROWN DERBYS Lace Up For Men</h3>
+                    <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+                <p class="price"><strike>₹2,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹2,799/-</p>
+                <p>MRP:(Inclusive of all taxes)
+                Country Origin - INDIA</p>
+                <button class="add-to-cart" onclick=
+                "addToCart(this, 'TEAKWOOD LEATHER MEN SOLID BROWN DERBYS Lace Up For Men', 1699)">
+                Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-grid" id="productGrid">
+        <div class="product">
+            <img src="sap.jpg">
+            <div class="product-details">
+                <h3>SPARX Mens Ss 453 Sport Sandal</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+                <p class="price"><strike>₹12,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹9,999/-</p>
+                <p>MRP:(Inclusive of all taxes)
+                Country Origin - INDIA</p>
+                <button class="add-to-cart" onclick=
+                "addToCart(this, 'SPARX Mens Ss 453 Sport Sandal', 1699)">
+                Add to Cart</button>
+            </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="sandal.webp">
+            <div class="product-details">
+                <h3>Sparx SS 588 Men Sandals</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+                <p class="price"><strike>₹6,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹5,999/-</p>
+                <p>MRP: (Inclusive of all taxes)</p>
+                <p>Country Origin - INDIA</p>
+                <button class="add-to-cart" onclick="addToCart(this, 'Sparx SS 588 Men Sandals', 5999)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="sand.jpg">
+            <div class="product-details">
+                <h3>SPARX Men Black Sports Sandals</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+                <p class="price"><strike>₹6,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹5,999/-</p>
+                <p>MRP: (Inclusive of all taxes)</p>
+                <p>Country Origin - INDIA</p>
+                <button class="add-to-cart" onclick="addToCart(this, 'SPARX Men Black Sports Sandals', 5999)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="for.webp">
+            <div class="product-details">
+                <h3>Denill Pointed Toe Block Heel Pumps</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+                <p class="price"><strike>₹12,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹9,999/-</p>
+                <p>MRP:(Inclusive of all taxes)</p>
+                <p>Country Origin - INDIA</p>
+                <button class="add-to-cart" onclick="addToCart(this, 'Denill Pointed Toe Block Heel Pumps', 9999)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="ojh.jpeg">
+            <div class="product-details">
+                <h3>Slip-On Block Heeled Pumps</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+                <p class="price"><strike>₹6,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹5,999/-</p>
+                <p>MRP: (Inclusive of all taxes)</p>
+                <p>Country Origin - INDIA</p>
+                <button class="add-to-cart" onclick="addToCart(this, 'Slip-On Block Heeled Pumps', 5999)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <img src="byg.jpg">
+            <div class="product-details">
+                <h3>Reptilian Texture Pointed-Toe Pumps</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+                <p class="price"><strike>₹6,999/-</strike></p>
+                <p style="color: rgb(0, 128, 255);">ONLY FOR ₹5,999/-</p>
+                <p>MRP: (Inclusive of all taxes)</p>
+                <p>Country Origin - INDIA</p>
+                <button class="add-to-cart" onclick="addToCart(this, 'Reptilian Texture Pointed-Toe Pumps', 5999)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+        
+</section>
+
+<center><h1>Fancy Wears</h1></center>
+<section class="product-grid" id="productGrid">
+    
+    <div class="product">
+        <img src="ld.webp">
+        <div class="product-details">
+            <h3>Lavender toe ring flats</h3>
+            <label for="size">Select Size:</label>
+            <select id="size" name="size">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <br><br>
+            <p class="price"><strike>₹2,299/-</strike></p>
+            <p style="color: rgb(0, 128, 255);">ONLY FOR ₹1,699/-</p>
+            <p>MRP:(Inclusive of all taxes)
+            Country Origin - INDIA</p>
+
+            <button class="add-to-cart" onclick="addToCart(this, 'Lavender toe ring flats', 1699)">Add To Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="sultan.jpg">
+        <div class="product-details">
+            <h3>Women Rose gold Toned Ethnic Block Heels</h3>
+            <label for="size">Select Size:</label>
+            <select id="size" name="size">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            
+            <br><br>
+            <p class="price"><strike>₹1,999/-</strike></p>
+            <p style="color: rgb(0, 128, 255);">ONLY FOR ₹1,495/-</p>
+            <p>MRP:(Inclusive of all taxes)
+            Country Origin - INDIA</p>
+            <button class="add-to-cart" onclick="addToCart(this, 'Women Rose gold Toned Ethnic Block Heels', 1495)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="chappal.webp">
+        <div class="product-details">
+            <h3>Atrani Embroidered Heels</h3>
+                <label for="size">Select Size:</label>
+            <select id="size" name="size">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            
+            <br><br>
+            <p class="price"><strike>₹2,999/-</strike></p>
+            <p style="color: rgb(0, 128, 255);">ONLY FOR ₹2,799/-</p>
+            <p>MRP:(Inclusive of all taxes)
+            Country Origin - INDIA</p>
+            <button class="add-to-cart" onclick="addToCart(this, 'Atrani Embroidered Heels', 2799)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<center><h1>Ladies Sandal</h1></center>
+
+<section class="product-grid" id="productGrid2">
+    <div class="product">
+        <img src="san.jpg">
+        <div class="product-details">
+            <h3>Stylish Fancy Block Heel Sandal With Ankle Strap For Women Casual Women Heel Sandals</h3>
+            <label for="size">Select Size:</label>
+            <select id="size" name="size">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            
+            <br><br>
+            <p class="price"><strike>₹12,999/-</strike></p>
+            <p style="color: rgb(0, 128, 255);">ONLY FOR ₹9,999/-</p>
+            <p>MRP:(Inclusive of all taxes)
+            Country Origin - INDIA</p>
+            <button class="add-to-cart" onclick="addToCart(this, 'Stylish Fancy Block Heel Sandal', 9999)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="pic.jpg">
+        <div class="product-details">
+            <h3>Stylish Casual Heel Sandals with Solid Backstrap & Ankle Strap Comfortable Sole</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+            <p class="price"><strike>₹6,999/-</strike></p>
+            <p style="color: rgb(0, 128, 255);">ONLY FOR ₹5,999/-</p>
+            <p>MRP: (Inclusive of all taxes)</p>
+            <p>Country Origin - INDIA</p>
+            <button class="add-to-cart" onclick="addToCart(this, 'Stylish Casual Heel Sandals', 5999)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="cac.jpeg">
+        <div class="product-details">
+            <h3>RathoRR Women Heels Sandal Beige</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+            <p class="price"><strike>₹6,999/-</strike></p>
+            <p style="color: rgb(0, 128, 255);">ONLY FOR ₹5,999/-</p>
+            <p>MRP: (Inclusive of all taxes)</p>
+            <p>Country Origin - INDIA</p>
+            <button class="add-to-cart" onclick="addToCart(this, 'RathoRR Women Heels Sandal Beige', 5999)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<center><h1 style="background-color: aquamarine;">Loafers</h1></center>
+<section class="product-grid" id="productGrid2">
+    <div class="product">
+        <img src="loffa.webp">
+        <div class="product-details">
+            <h3>Jove Women Round-Toe Bit Loafers For Women</h3>
+            <label for="size">Select Size:</label>
+            <select id="size" name="size">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            
+            <br><br>
+            <p class="price"><strike>₹12,999/-</strike></p>
+            <p style="color: rgb(0, 128, 255);">ONLY FOR ₹9,999/-</p>
+            <p>MRP:(Inclusive of all taxes)
+            Country Origin - INDIA</p>
+            <button class="add-to-cart" onclick="addToCart(this, 'Jove Women Round-Toe Bit Loafers', 9999)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="lof.webp">
+        <div class="product-details">
+            <h3>Cushioned footbed Textured and patterned outsole</h3>
+                <label for="size">Select Size:</label>
+                <select id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                
+                <br><br>
+            <p class="price"><strike>₹6,999/-</strike></p>
+            <p style="color: rgb(0, 128, 255);">ONLY FOR ₹5,999/-</p>
+            <p>MRP: (Inclusive of all taxes)</p>
+            <p>Country Origin - INDIA</p>
+            Country Origin - INDIA</p>
+            <button class="add-to-cart" onclick="addToCart(this, 'Jove Women Round-Toe Bit Loafers', 9999)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="girlssss.jpg" alt="Lee Cooper Shoes">
+        <div class="product-details">
+            <h3>Women's Loafer Pumps | Nordstrom</h3>
+            <label for="size">Select Size:</label>
+            <select id="size" name="size">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            
+            <br><br>
+            <p class="price"><strike>₹6,999/-</strike></p>
+            <p style="color: rgb(0, 128, 255);">ONLY FOR ₹5,999/-</p>
+            <p>MRP: (Inclusive of all taxes)</p>
+            <p>Country Origin - INDIA</p>
+            <button class="add-to-cart" onclick="addToCart(this, 'Women\'s Loafer Pumps | Nordstrom', 5999)">Add to Cart</button>
+        </div>
+    </div>
+    
+</section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about-us">
+                <h3>About Us</h3>
+                <p>We are a leading eCommerce platform providing high-quality products at competitive prices. Our mission is to offer the best shopping experience to our customers.</p>
+            </div>
+    
+            <div class="footer-section customer-service">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Help & FAQs</a></li>
+                    <li><a href="#">Returns Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section company-info">
+                <h3>Company Info</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+    
+    
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

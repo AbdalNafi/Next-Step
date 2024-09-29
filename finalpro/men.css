@@ -1,0 +1,287 @@
+/* Footer Section */
+.footer {
+    margin-top: 15px;
+}
+.footer-panel1 {
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+/* Product Card */
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product p {
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #55ff00;
+}
+
+.add-to-cart {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #ffcc66;
+}
+
+.footer-panel1 a {
+    text-decoration: none;
+    color: aqua;
+}
+.footer-panel2 {
+    background-color: #222f3d;
+    color: white;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul {
+    margin-top: 25px;
+}
+ul a {
+    color: #dddddd;
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+.footer-panel3 {
+    background-color: #ffffff;
+    color: white;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 70px;
+}
+.logo {
+    background-image: url("logo.png");
+    background-size: contain; /* Ensures the image fits without distortion */
+    background-position: center; /* Centers the image within the div */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 200px; /* Wider size */
+    height: auto; /* Automatically adjusts height to maintain aspect ratio */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.footer-panel4 {
+    background-color: #011013;
+    color: white;
+    height: 85px;
+    text-align: center;
+}
+.footer-panel4 a {
+    gap: 60px;
+}
+.pages {
+    font-size: 0.8rem;
+    padding-top: 25px;
+}
+.copyright {
+    font-size: 1rem;
+    padding-top: 5px;
+}
+
+ 
+
+
+/* header video */
+/* Header */
+header {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjusted header height */
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay for better text readability */
+}
+
+.header-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.header-content p {
+    font-size: 1.5rem;
+}
+
+.content {
+    position: absolute;
+    top: 70%; /* Adjusted for better button placement */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    margin: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ff9900;
+}
+
+.footer-section p {
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff9900;
+}
+
+.social-media a {
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #ff9900;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #111;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #777;
+}
+

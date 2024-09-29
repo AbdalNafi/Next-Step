@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+    </header>
+    <main>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems">
+                <!-- Cart items will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <div class="cart-summary">
+            <p>Total Amount: ₹<span id="totalAmount">0</span></p>
+            <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about-us">
+                <h3>About Us</h3>
+                <p>We are a leading eCommerce platform providing high-quality products at competitive prices. Our mission is to offer the best shopping experience to our customers.</p>
+            </div>
+            <div class="footer-section customer-service">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Help & FAQs</a></li>
+                    <li><a href="#">Returns Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section company-info">
+                <h3>Company Info</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sample cart data (you would typically retrieve this from a database or local storage)
+        const cart = [
+            { name: 'Red Chief Genuine Leather Shoes', price: 3699, quantity: 1 },
+            { name: 'Zelt High Quality Italian Suede Leather Boots', price: 2795, quantity: 1 },
+            { name: 'Woodland Mens OGC 3608119 Sneaker', price: 9999, quantity: 1 },
+        ];
+
+        function renderCart() {
+            const cartItemsContainer = document.getElementById('cartItems');
+            cartItemsContainer.innerHTML = '';
+
+            let totalAmount = 0;
+
+            cart.forEach((item, index) => {
+                const total = item.price * item.quantity;
+                totalAmount += total;
+
+                cartItemsContainer.innerHTML += `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>₹${item.price}</td>
+                        <td>
+                            <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
+                        </td>
+                        <td>₹${total}</td>
+                        <td><button class="remove-btn" onclick="removeFromCart(${index})">Remove</button></td>
+                    </tr>
+                `;
+            });
+
+            document.getElementById('totalAmount').textContent = totalAmount;
+        }
+
+        function updateQuantity(index, quantity) {
+            cart[index].quantity = parseInt(quantity, 10);
+            renderCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            renderCart();
+        }
+
+        function proceedToCheckout() {
+            alert('Proceeding to checkout');
+            // Add your checkout logic here
+        }
+
+        // Initial render
+        renderCart();
+    </script>
+</body>
+</html>
